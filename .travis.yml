@@ -9,7 +9,6 @@ before_script:
     - npm install --quiet uglify-js@1 && mkdir -p vendor/uglifyjs && mv node_modules vendor/uglifyjs
     - npm install --quiet coffee-script handlebars less stylus uglifycss uglify-js
     - gem install compass
-    - which ruby
-    - which compass
+    - which java
 
 script: phpunit -vc .travis.phpunit.xml
