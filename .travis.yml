@@ -6,9 +6,7 @@ php:
 
 before_script:
     - composer install --dev
-    - npm install --quiet uglify-js@1 && mkdir -p vendor/uglifyjs && mv node_modules vendor/uglifyjs
-    - npm install --quiet coffee-script handlebars less stylus uglifycss uglify-js
-    - gem install compass
-    - which java
+    - npm install -q uglify-js@1 && mkdir -p vendor/uglifyjs && mv node_modules vendor/uglifyjs
+    - npm install -gq coffee-script handlebars less stylus uglifycss uglify-js
 
-script: phpunit -vc .travis.phpunit.xml
+script: phpunit -v
